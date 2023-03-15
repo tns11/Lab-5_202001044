@@ -31,13 +31,12 @@ import numpy as np
 -> from tkinter import *
 from PIL import Image
 
-# maze-picture generator https://keesiemeijer.github.io/maze-generator/
 
 ITERATIVE = 0
 A_STAR = 1
 
 
-  Error displayed: Wildcard import tkinter
+ Error displayed: Wildcard import tkinter
 -> This error is a valid error. The developer imported the whole library rather than just the required modules, which would unnecessarily increase the time of execution and size of project.
 
 
