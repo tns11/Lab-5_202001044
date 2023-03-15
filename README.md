@@ -17,11 +17,31 @@ Title: Static Analysis
 
 
 
-Selected Tool: Prospector.
+Selected Tool: Pylint
 
-Reason → The analysis done by this tool is dependent on library. <sup> 1 </sup> It is required, as many-a-times, the purpose of a software depends on library it is using. (For example: scipy library is used in Scientific Computing). It has the functionality of other Python Static Analysis Tools<sup> 1 </sup>. Hence, I infer, we can get all possible errors, code smells, etc. However, we would need to decide, whether the suggested error is actually an error.
+Reason → Has many features over other tools.
+
+
+<h1>Errors in file: </h1>
+
+Source:  https://github.com/MSTC-DA-IICT/Hacktoberfest22-Python-2
+
+
+import numpy as np
+-> from tkinter import *
+from PIL import Image
+
+# maze-picture generator https://keesiemeijer.github.io/maze-generator/
+
+ITERATIVE = 0
+A_STAR = 1
+
+
+  Error displayed: Wildcard import tkinter
+-> This error is a valid error. The developer imported the whole library rather than just the required modules, which would unnecessarily increase the time of execution and size of project.
+
 
 
 
 References:
-  1.https://prospector.landscape.io/en/master/index.html
+  1.https://www.geeksforgeeks.org/pylint-module-in-python/
